@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe3c9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card-content .description {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .detail-btn {
+            background: white;
+            color: #EB8826;
+            border: 2px solid #EB8826;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .detail-btn:hover {
+            background: #EB8826;
+            color: white;
+        }
+
+        .star-button {
+            color: #ccc;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .star-button.active {
+            color: #EB8826;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/400x250');"></div>
+            <div class="card-content">
+                <h3>มนต์รักทรายทอง</h3>
+                <p><i class="fas fa-clock"></i> 19:00 - 21:00</p>
+                <p><i class="fas fa-calendar-alt"></i> 29 December 2024</p>
+                <p><i class="fas fa-map-marker-alt"></i> Performance Art Theater</p>
+                <p class="description">Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                <div class="footer">
+                    <span><i class="fas fa-ticket-alt"></i> 120 Baht</span>
+                    <button class="detail-btn">Detail</button>
+                    <div class="star-button" onclick="toggleStar(this)">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://via.placeholder.com/400x250');"></div>
+            <div class="card-content">
+                <h3>new year party</h3>
+                <p><i class="fas fa-clock"></i> 19:00 - 24:00</p>
+                <p><i class="fas fa-calendar-alt"></i> 31 December 2024</p>
+                <p><i class="fas fa-map-marker-alt"></i> NU</p>
+                <p class="description">Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                <div class="footer">
+                    <span><i class="fas fa-ticket-alt"></i> Free</span>
+                    <button class="detail-btn">Detail</button>
+                    <div class="star-button" onclick="toggleStar(this)">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleStar(element) {
+            element.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
