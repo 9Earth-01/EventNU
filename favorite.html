@@ -26,22 +26,22 @@
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" href="index.html">EventNU</a>
+            <a class="logo" style="color: #ff8c42;" href="index.html">EventNU</a>
             <ul class="nav">
                 <li class="item">
-                    <a class="link" href="index.html">Home</a>
+                    <a class="link" style="color: gray;" href="index.html">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="calendar.html">Calendar</Details></a>
+                    <a class="link" style="color: gray;" href="calendar.html">Calendar</Details></a>
                 </li>
                 <li class="item">
-                    <a class="link" href="favorite.html">Favorite</a>
+                    <a class="link" style="color: gray;" href="favorite.html">Favorite</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="layout.html">Layout</a>
+                    <a class="link" style="color: gray;" href="layout.html">Layout</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="setting.html">Setting</a>
+                    <a class="link" style="color: gray;" href="setting.html">Setting</a>
                 </li>
                 <li class="item ml-md-3">
                     <a href="components.html" class="btn btn-primary">Components</a>
@@ -50,125 +50,111 @@
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
+                    <div class="hamburger-inner"></div>
+                    <div class="hamburger-inner"></div>
                 </div>
             </a>
         </div>
     </nav><!-- End of Page Navbar -->
 
-    <!-- page header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">Event</span>
-                <span class="down">CALENDAR</span>
-            </h1>
-            <p class="header-subtitle">Naresuan University</p>
+    <!-- Favorite Section -->
+    <section class="favorite-section" style="margin-top: 70px;">
+        <h3 class="section-title">Favorite</h3> 
+        <div class="event-grid">
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-picture-container">
+                    <div class="icon-container">
+                        <i class="fas fa-bell" onclick="toggleBell(this)" title="Notifications"></i>
+                        <i class="fas fa-star" onclick="toggleStar(this)" title="Favorite"></i>
+                    </div>
+                    <img src="assets/imgs/chrismas.jpeg" alt="Event Image" class="event-picture">
+                </div>
+                <div class="event-details">
+                    <p class="event-date">Date: <span class="event-date-red">12 Jan 2025</span></p>
+                    <p class="event-title">Event Title</p>
+                    <p class="event-description">This is a short description of the event.</p>
+                    <p class="event-location"><span class="icon pin"></span> Location: Naresuan University</p>
+                </div>
+            </div>
         </div>
-    </header><!-- end of page header -->
-
-    <section class="section pt-0" id="about">
-        <!-- container -->
-        <div class="container">
-            <!-- about wrapper -->
-            <div class="about d-flex">
-                <!-- Left Sidebar -->
-                <div class="left-sidebar" style="margin-top: 250px;">
-                    <div class="calendar-container">
-                        <div class="calendar-header">
-                            <button class="change-month" id="prev-month">&lt;</button>
-                            <div>
-                                <h2 class="month-name">December</h2>
-                                <h3 class="year-number">2024</h3>
-                            </div>
-                            <button class="change-month" id="next-month">&gt;</button>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="calendar-day">Sun</div>
-                            <div class="calendar-day">Mon</div>
-                            <div class="calendar-day">Tue</div>
-                            <div class="calendar-day">Wed</div>
-                            <div class="calendar-day">Thu</div>
-                            <div class="calendar-day">Fri</div>
-                            <div class="calendar-day">Sat</div>
-                        </div>
-                    </div>
-                    <!-- Event Details -->
-                    <div class="event-details" style="margin-top: 30px;">
-                        <div class="event-content">
-                            <!-- Event Text Content -->
-                            <div class="event-text-content">
-                                <div class="event-header">
-                                    <h3>Event Detials</h3>
-                                </div>
-                                <!-- Event Details List -->
-                                <div class="event-details-list">
-                                    <div class="event-detail-item">
-                                        <span class="event-name">Opening Ceremony</span>
-                                        <span class="event-time">09:00 - 10:00</span>
-                                    </div>
-                                    <div class="event-detail-item">
-                                        <span class="event-name">Gift Exchange</span>
-                                        <span class="event-time">10:30 - 12:00</span>
-                                    </div>
-                                    <div class="event-detail-item">
-                                        <span class="event-name">Games and Fun</span>
-                                        <span class="event-time">13:00 - 15:00</span>
-                                    </div>
-                                    <div class="event-detail-item">
-                                        <span class="event-name">Closing Ceremony</span>
-                                        <span class="event-time">16:00 - 17:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Register Button to Navigate to Registration Page -->
-                        <div class="register-button-container">
-                            <a href="register.html" class="btn btn-register">Register Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Sidebar -->
-                <div class="comment-section">
-                    <!-- Event Image -->
-                    <h3>Event Picture</h3>
-                    <div class="event-image-box">
-                        <img src="assets/imgs/chrismas.jpeg" alt="Christmas Event" class="event-image">
-                    </div>
-
-                    
-                    <!-- Comment Form -->
-                    <div class="comment-form" style="margin-top: 30px;">
-                        <h3>Comments</h3>
-                        <textarea id="comment-input" placeholder="Write a comment..." rows="3"
-                            class="comment-textarea"></textarea>
-                        <button class="btn btn-submit-comment" onclick="submitComment()">Post</button>
-                    </div>
-
-                    <!-- Comments Display -->
-                    <div id="comments-display" class="comments-display">
-                        <!-- Example comment with image -->
-                        <div class="comment-item">
-                            <div class="comment-header">
-                                <img src="assets/img/user1.jpg" alt="User1" class="comment-avatar">
-                                <strong>User1:</strong>
-                            </div>
-                            <p>This is an awesome event!</p>
-                        </div>
-                        <div class="comment-item">
-                            <div class="comment-header">
-                                <img src="assets/img/user2.jpg" alt="User2" class="comment-avatar">
-                                <strong>User2:</strong>
-                            </div>
-                            <p>I can't wait to join the Christmas celebration!</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
     </section>
+    <!-- End Favorite Section -->
+
 
     <!-- footer -->
     <div class="container">

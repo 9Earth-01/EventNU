@@ -6,6 +6,26 @@ function toggleStar(element) {
   element.classList.toggle("active");
 }
 
+//
+// // 
+//BELL
+function toggleBell(element) {
+  element.classList.toggle('active'); // เพิ่ม/ลบคลาส 'active'
+  if (element.classList.contains('active')) {
+      alert('Notifications turned on!');
+  } else {
+      alert('Notifications turned off!');
+  }
+}
+
+function toggleStar(element) {
+  element.classList.toggle('active'); // เพิ่ม/ลบคลาส 'active'
+  if (element.classList.contains('active')) {
+      alert('Added to favorites!');
+  } else {
+      alert('Removed from favorites!');
+  }
+}
 
 //
 // // 
