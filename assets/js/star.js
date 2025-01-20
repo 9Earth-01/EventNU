@@ -27,7 +27,13 @@ function toggleStar(element) {
   }
 }
 
-function openModal() {
+function openModal(eventIndex) {
+  const event = events[eventIndex];
+  document.getElementById('eventIndex').value = eventIndex;
+  document.getElementById('eventTitle').value = event.title;
+  document.getElementById('eventDescription').value = event.description;
+  document.getElementById('eventDate').value = event.date;
+  document.getElementById('eventLocation').value = event.location;
   document.getElementById('editModal').style.display = 'flex';
 }
 
@@ -37,6 +43,9 @@ function closeModal() {
 
 function saveEdit(event) {
   if (event) event.preventDefault(); // Prevent form submission if called from form
+
+  // Get the event index
+  const eventIndex = document.getElementById('eventIndex').value;
 
   // Get values from inputs
   const title = document.getElementById('eventTitle').value;
@@ -49,18 +58,22 @@ function saveEdit(event) {
   const fee = type === "Paid" ? document.getElementById('eventFee').value : 0;
   const organizerId = document.getElementById('organizerId').value;
 
-  // Log or process the data
-  console.log({
-      title,
-      description,
-      date,
-      time,
-      location,
-      status,
-      type,
-      fee,
-      organizerId,
-  });
+  // Update the event object
+  events[eventIndex] = {
+    ...events[eventIndex],
+    title,
+    description,
+    date,
+    time,
+    location,
+    status,
+    type,
+    fee,
+    organizerId,
+  };
+
+  // Regenerate the event cards
+  generateEventCards();
 
   // Close the modal after saving
   closeModal();
@@ -68,7 +81,6 @@ function saveEdit(event) {
   // Optionally show a confirmation
   alert('Event updated successfully!');
 }
-
 
 function toggleFeeField() {
   const eventType = document.getElementById('eventType').value;
