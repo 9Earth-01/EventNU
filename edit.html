@@ -151,22 +151,58 @@
             <div class="edit-modal-content">
                 <span class="close-btn" onclick="closeModal()">&times;</span>
                 <h3>Edit Event</h3>
-                <form>
+                <form onsubmit="saveEdit(event)">
+                    <!-- Title -->
                     <label for="eventTitle">Event Title:</label>
                     <input type="text" id="eventTitle" placeholder="Enter event title"> <br/>
-                    
-                    <label for="eventDate">Event Date:</label>
-                    <input type="date" id="eventDate"> <br/>
-                    
+        
+                    <!-- Description -->
                     <label for="eventDescription">Event Description:</label> <br/>
                     <textarea id="eventDescription" placeholder="Enter event description"></textarea> <br/>
-                    
+        
+                    <!-- Date -->
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate"> <br/>
+        
+                    <!-- Time -->
+                    <label for="eventTime">Event Time:</label>
+                    <input type="time" id="eventTime"> <br/>
+        
+                    <!-- Location -->
                     <label for="eventLocation">Event Location:</label>
                     <input type="text" id="eventLocation" placeholder="Enter event location"> <br/>
-                    
-                    <input class="btn btn-primary" onclick="saveEdit()" type="submit" value="Save">
+        
+                    <!-- Status -->
+                    <label for="eventStatus">Event Status:</label>
+                    <select id="eventStatus">
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select> <br/>
+        
+                    <!-- Type -->
+                    <label for="eventType">Event Type:</label>
+                    <select id="eventType" onchange="toggleFeeField()">
+                        <option value="Free">Free</option>
+                        <option value="Paid">Paid</option>
+                    </select> <br/>
+        
+                    <!-- Fee (Conditional) -->
+                    <div id="feeContainer" style="display: none;">
+                        <label for="eventFee">Event Fee:</label>
+                        <input type="number" id="eventFee" placeholder="Enter event fee" min="0" step="0.01"> <br/>
+                    </div>
+        
+                    <!-- Organizer ID -->
+                    <label for="organizerId">Organizer ID:</label>
+                    <input type="text" id="organizerId" placeholder="Enter organizer ID"> <br/>
+        
+                    <!-- Save Button -->
+                    <button class="btn btn-primary" type="button" onclick="saveEdit()">Save</button>
                 </form>
             </div>
+        </div>
+        
         </div>
     </section>
     <!-- End Favorite Section -->
