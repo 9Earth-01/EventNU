@@ -35,22 +35,51 @@ function closeModal() {
   document.getElementById('editModal').style.display = 'none';
 }
 
-function saveEdit() {
-  // Get input values
+function saveEdit(event) {
+  if (event) event.preventDefault(); // Prevent form submission if called from form
+
+  // Get values from inputs
   const title = document.getElementById('eventTitle').value;
-  const date = document.getElementById('eventDate').value;
   const description = document.getElementById('eventDescription').value;
+  const date = document.getElementById('eventDate').value;
+  const time = document.getElementById('eventTime').value;
   const location = document.getElementById('eventLocation').value;
+  const status = document.getElementById('eventStatus').value;
+  const type = document.getElementById('eventType').value;
+  const fee = type === "Paid" ? document.getElementById('eventFee').value : 0;
+  const organizerId = document.getElementById('organizerId').value;
 
-  // For now, log the data (you can update the event dynamically here)
-  console.log({ title, date, description, location });
+  // Log or process the data
+  console.log({
+      title,
+      description,
+      date,
+      time,
+      location,
+      status,
+      type,
+      fee,
+      organizerId,
+  });
 
-  // Close the modal
+  // Close the modal after saving
   closeModal();
 
   // Optionally show a confirmation
   alert('Event updated successfully!');
 }
+
+
+function toggleFeeField() {
+  const eventType = document.getElementById('eventType').value;
+  const feeContainer = document.getElementById('feeContainer');
+  if (eventType === "Paid") {
+      feeContainer.style.display = "block";
+  } else {
+      feeContainer.style.display = "none";
+  }
+}
+
 
 //
 // // 
